@@ -14,7 +14,7 @@ Serving a simple machine learning model as a webservice using [flask](http://fla
         -H 'Content-Type: application/json' \
         -d '[5.9,3.0,5.1,1.8]'
      ```
- 3. Run ```docker build -t app-iris .``` to  build the docker image using ```Dockerfile```. (Pay attention to the period in the docker build command)
+ 3. Run ```docker build -t iris-app .``` to  build the docker image using ```Dockerfile```. (Pay attention to the period in the docker build command)
  4. Run ```docker run -p 80:80 app-iris``` to run the docker container that got generated using the `app-iris` docker image. (This assumes that the port in app.py is set to 80)
  5. Use the below command in terminal to query the flask server to get a reply ```2``` for the model file provided in this repo:
     ```
@@ -23,8 +23,4 @@ Serving a simple machine learning model as a webservice using [flask](http://fla
         -H 'Content-Type: application/json' \
         -d '[5.9,3.0,5.1,1.8]'
     ```
-    
-For details on floating the containerized app on [AWS ec2 instance](https://aws.amazon.com/ec2/), see the [blog](https://medium.com/@tanuj.jain.10/simple-way-to-deploy-machine-learning-models-to-cloud-fd58b771fdcf).
 
-## LICENSE
-See [LICENSE](LICENSE) for details.
